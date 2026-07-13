@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cody Marsee — Software Engineer</title>
+    <meta
+      name="description"
+      content="Cody Marsee is a software engineer who builds small, useful tools and writes about how they came together."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a href="index.html" class="logo"
+          >jordan<span class="dot">.</span>cole</a
+        >
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+        </button>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero wrap">
+        <span class="eyebrow">Software Engineer</span>
+        <h1>I build small, <span class="role">useful</span> tools.</h1>
+        <p class="lede">
+          I'm Jordan — I write backend systems by day and ship weekend projects
+          that scratch my own itches. This site is where I keep both, and the
+          notes on how they got made.
+        </p>
+        <div class="status-line">
+          <span class="prompt">&gt;</span> currently building a habit-tracking
+          CLI<span class="cursor" aria-hidden="true"></span>
+        </div>
+        <div class="hero-links">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="blog/index.html">Read the blog</a>
+        </div>
+      </section>
+
+      <section class="block" id="projects">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Projects</h2>
+            <a class="view-all" href="https://github.com/codymarsee-blip"
+              >all repos →</a
+            >
+          </div>
+
+          <div class="entry" data-reveal>
+            <span class="index-num">001</span>
+            <div>
+              <h3>Tideline</h3>
+              <p class="desc">
+                A minimal habit tracker that lives in your terminal — logs
+                streaks to a local SQLite file, no account required.
+              </p>
+              <ul class="tags">
+                <li class="tag">Go</li>
+                <li class="tag">SQLite</li>
+                <li class="tag">CLI</li>
+              </ul>
+              <div class="links">
+                <a href="#">Live →</a>
+                <a href="#">Code →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="entry" data-reveal>
+            <span class="index-num">002</span>
+            <div>
+              <h3>Fieldnote</h3>
+              <p class="desc">
+                A tiny Markdown blog engine that compiles to static HTML in
+                under 200ms. Built to replace the last three static site
+                generators I got frustrated with.
+              </p>
+              <ul class="tags">
+                <li class="tag">Node.js</li>
+                <li class="tag">Markdown</li>
+              </ul>
+              <div class="links">
+                <a href="#">Live →</a>
+                <a href="#">Code →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="entry" data-reveal>
+            <span class="index-num">003</span>
+            <div>
+              <h3>Portside</h3>
+              <p class="desc">
+                A small dashboard that pings your side projects' uptime and
+                opens a GitHub issue automatically when something falls over.
+              </p>
+              <ul class="tags">
+                <li class="tag">Python</li>
+                <li class="tag">FastAPI</li>
+                <li class="tag">GitHub API</li>
+              </ul>
+              <div class="links">
+                <a href="#">Live →</a>
+                <a href="#">Code →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="about">
+        <div class="wrap about-grid">
+          <span class="eyebrow">About</span>
+          <h2>Backend-leaning, curious about everything adjacent.</h2>
+          <p style="max-width: 60ch; color: var(--ink-soft)">
+            I'm a software engineer with a soft spot for tools that remove
+            friction rather than add features. Most of what's here started as a
+            problem I hit at work or at 11pm on a Tuesday. I like systems I can
+            hold in my head, plain-text file formats, and writing things down
+            before I forget why I built them.
+          </p>
+          <ul class="skill-list">
+            <li class="tag">Go</li>
+            <li class="tag">TypeScript</li>
+            <li class="tag">Python</li>
+            <li class="tag">PostgreSQL</li>
+            <li class="tag">Docker</li>
+            <li class="tag">AWS</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>From the blog</h2>
+            <a class="view-all" href="blog/index.html">all posts →</a>
+          </div>
+
+          <div class="entry post-entry" data-reveal>
+            <span class="index-num">01</span>
+            <div>
+              <h3>
+                <a href="blog/why-i-rebuilt-my-site.html"
+                  >Why I rebuilt my personal site — again</a
+                >
+              </h3>
+              <p class="desc">
+                Third rebuild in four years. Here's what finally made it stick.
+              </p>
+              <span class="meta">July 2026 · 4 min read</span>
+            </div>
+          </div>
+
+          <div class="entry post-entry" data-reveal>
+            <span class="index-num">02</span>
+            <div>
+              <h3>
+                <a href="blog/notes-on-shipping-side-projects.html"
+                  >Notes on shipping side projects</a
+                >
+              </h3>
+              <p class="desc">
+                The gap between "working on my machine" and something I'll
+                actually link to people.
+              </p>
+              <span class="meta">June 2026 · 6 min read</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="wrap">
+        <span class="copyright">© 2026 Cody Marsee</span>
+        <ul class="footer-links">
+          <li><a href="mailto:cmarsee@alumni.iu.edu">Email</a></li>
+          <li><a href="https://github.com/cmarsee-blip">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/codymarsee">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
