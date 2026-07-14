@@ -1,66 +1,45 @@
-# Personal site
+# cmarsee-blip.github.io
 
-A static portfolio + blog, no build step required. Plain HTML/CSS/JS, ready for GitHub Pages.
+My personal portfolio and blog — built as a static site, no framework or build step.
+
+**Live:** [cmarsee-blip.github.io](https://cmarsee-blip.github.io)
+
+## About this site
+
+A portfolio covering my TripleTen software engineering projects and a blog where I write about the switch from sports and construction into software. The design has a running baseball motif throughout — projects and posts are numbered as "innings," and section dividers use an alternating stitch pattern styled after baseball seams.
+
+## Structure
 
 ```
-personal-site/
-├── index.html                          Homepage (hero, projects, about, blog teaser)
+├── index.html                                 Homepage — hero, projects, about, blog teaser
 ├── blog/
-│   ├── index.html                      Blog listing
-│   ├── why-i-rebuilt-my-site.html      Sample post
-│   └── notes-on-shipping-side-projects.html
+│   ├── index.html                              Blog listing
+│   └── my-path-into-software-engineering.html  First post
 ├── css/style.css
 ├── js/main.js
 └── .nojekyll
 ```
 
-## 1. Personalize it
+## Tech stack
 
-Everything is placeholder content for "Cody Marsee" — find and replace with your own:
+Plain HTML, CSS, and vanilla JavaScript. No build tools, no dependencies to install — editing a file and pushing is the whole workflow. Fonts (Fraunces, Inter, IBM Plex Mono) load from Google Fonts via CDN.
 
-- **Name & title** — `<title>` tags, the logo in the header, hero heading, footer copyright
-- **Bio** — the About section in `index.html`
-- **Projects** — the three `.entry` blocks under `#projects` in `index.html`
-- **Skills** — the `.skill-list` tags in the About section
-- **Social links** — `mailto:`, GitHub, LinkedIn, X links in the footer (appears on every page)
-- **Blog posts** — edit the two sample posts or delete them and duplicate the file structure for new ones (copy a post file, change the title/content, then link it from both `index.html`'s blog teaser and `blog/index.html`)
+## Editing locally
 
-A quick way to catch most of it:
+Open `index.html` directly in a browser — all links are relative, so it works fully offline, no server required.
 
-```
-grep -rn "Cody Marsee\|yourusername\|example.com" .
-```
+## Adding a new blog post
 
-## 2. Preview locally
-
-No server needed — just open `index.html` in a browser. All links are relative, so this works identically before and after it's on GitHub.
-
-## 3. Put it on GitHub
-
-You said you've already got a GitHub account with other repos — here's the part that's specific to this site:
-
-1. **Create a new repository.**
-   - Name it `yourusername.github.io` (using your actual GitHub username) if you want the site at the root of that domain — this is the only name that gets that behavior.
-   - Any other name (e.g. `personal-site`) also works, but the site will live at `yourusername.github.io/repo-name/` instead.
-2. **Push these files to it:**
+1. Duplicate an existing post file in `blog/` and rename it.
+2. Update the `<title>`, date, read time, and content inside.
+3. Add a matching entry (with the next "Inning" number) to `blog/index.html` and, if it should show on the homepage teaser, to `index.html` as well.
+4. Commit and push:
    ```bash
-   cd personal-site
-   git init
    git add .
-   git commit -m "Initial site"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/REPO-NAME.git
-   git push -u origin main
+   git commit -m "Add new post: <title>"
+   git push
    ```
-3. **Enable Pages:** in the repo, go to _Settings → Pages_, set **Source** to "Deploy from a branch", pick the `main` branch and `/ (root)` folder, and save.
-4. GitHub gives you a URL (usually live within a minute or two) — either `https://yourusername.github.io` or `https://yourusername.github.io/repo-name/`.
 
-### Optional: custom domain
+## Adding a new project
 
-If you own a domain, add a `CNAME` file at the repo root containing just your domain (e.g. `yourname.com`), then point your DNS at GitHub's Pages IPs / `yourusername.github.io` per [GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site). Settings → Pages will also prompt you for this once Pages is enabled.
-
-## Notes
-
-- Fonts (Fraunces, Inter, IBM Plex Mono) load from Google Fonts via CDN — no local font files to manage.
-- The `.nojekyll` file stops GitHub from running its default Jekyll build, so the site is served exactly as-is.
-- No JS framework, no npm install, no build step — editing HTML/CSS directly is the workflow.
+Copy one of the `.entry` blocks under `#projects` in `index.html`, update the title, description, tags, and links, and give it the next sequential inning number.
